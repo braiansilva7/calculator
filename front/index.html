@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>L5 Networks</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="containerPainel">
+        <h1 class="calcH1">Calculadora</h1>
+        <h1 class="l5H1">L5.</h1>
+        <h1 class="networkH1">Networks</h1>
+    </div>
+        <div class="containerRegister">
+            <div class="register">
+                <input class="grid-register" type="text" maxlength="20" placeholder="Nome" name="name" id="name">
+                <input class="grid-register" type="button" value="Limpar" onclick="toClean()">
+                <input class="grid-register" type="button" value="Salvar" onclick="save()">
+            </div>
+        </div>
+        <div class="containerUser">
+            <h1>Usuário: </h1>
+            <h1 class="user"></h1>
+        </div>
+        <div class="container">
+            <div class="alinhar">
+                    <input class="grid-item" type="text" placeholder="0" name="display" id="display" disabled>
+                    <input class="grid-item btnClean" type="button" value="C" onclick="clearDisplay()">
+                    <input class="grid-item" type="button" value="(" onclick="addToDisplay('(')">
+                    <input class="grid-item" type="button" value=")" onclick="addToDisplay(')')">
+                    <input class="grid-item" type="button" value="/" onclick="addToDisplay('/')">
+                    <input class="grid-item" type="button" value="1" onclick="addToDisplay('1')">
+                    <input class="grid-item" type="button" value="2" onclick="addToDisplay('2')">
+                    <input class="grid-item" type="button" value="3" onclick="addToDisplay('3')">
+                    <input class="grid-item" type="button" value="X" onclick="addToDisplay('*')">
+                    <input class="grid-item" type="button" value="4" onclick="addToDisplay('4')">
+                    <input class="grid-item" type="button" value="5" onclick="addToDisplay('5')">
+                    <input class="grid-item" type="button" value="6" onclick="addToDisplay('6')">
+                    <input class="grid-item" type="button" value="-" onclick="addToDisplay('-')">
+                    <input class="grid-item" type="button" value="7" onclick="addToDisplay('7')">
+                    <input class="grid-item" type="button" value="8" onclick="addToDisplay('8')">
+                    <input class="grid-item" type="button" value="9" onclick="addToDisplay('9')">
+                    <input class="grid-item" type="button" value="+" onclick="addToDisplay('+')">
+                    <input class="grid-item" type="button" value="0" onclick="addToDisplay('0')">   
+                    <input class="grid-item" type="button" value="." onclick="addToDisplay('.')">           
+                    <input class="grid-item" type="button" value="=" onclick="calculate()">
+            </div>
+        </div>
+        <div class="containerNewRegister">
+            <input class="newRecord" type="button" value="Novo Registro" onclick="record()">
+            <input class="history" type="button" value="Histórico" onclick="viewHistory()">
+        </div>
+        <div id="table_history"></div>
+        <div class="containerReturn">
+            <input class="btnReturn" type="button" value="Retornar" onclick="viewReturn()">
+        </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
